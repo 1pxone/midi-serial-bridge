@@ -1,0 +1,33 @@
+{
+  "name": "electron-quick-start-typescript",
+  "version": "1.0.0",
+  "description": "A minimal Electron application written with Typescript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run build && electron ./dist/main.js"
+  },
+  "repository": "https://github.com/electron/electron-quick-start-typescript",
+  "keywords": [],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "easymidi": "^1.0.3",
+    "@serialport/parser-readline": "^8.0.6",
+    "@serialport/parser-byte-length": "^8.0.6",
+    "midi-parser-js": "^4.0.4",
+    "@serialport/list": "^8.0.7",
+    "serialport": "^8.0.7",
+    "tableify": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/serialport": "^8.0.0",
+    "@types/tableify": "^1.1.0",
+    "electron": "^6.0.8",
+    "electron-rebuild": "^1.10.1",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.0",
+    "prettier": "^2.0.2"
+  }
+}
