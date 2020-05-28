@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MIDI <--> SERIAL PORT BRIDGE</title>
+  </head>
+  <body>
+    <label>
+      <input type="checkbox" id="bridgeToggle" disabled="disabled"> Bridge enable
+    </label>
+    <br />
+    <label>Serial port:</label>
+    <select id="portSelection" disabled="disabled">
+      <option selected value> -- select an option -- </option>
+    </select>
+    <br />
+    <label>Baud rate:</label>
+    <select id="baudRateSelection" disabled="disabled">
+      <option disabled selected value> -- select an option -- </option>
+    </select>
+    <br />
+    <label>MIDI output:</label>
+    <select id="outputSelection" disabled="disabled">
+      <option selected value> -- select an option -- </option>
+      <option value="__virtualOutput">Virtual MIDI output</option>
+
+    </select>
+    <br />
+    <label>MIDI input:</label>
+    <select id="inputSelection" disabled="disabled">
+      <option selected value> -- select an option -- </option>
+      <option value="__virtualInput">Virtual MIDI input</option>
+    </select>
+    <!-- You can also require other files to run in this process -->
+    <script src="./dist/renderer.js"></script>
+  </body>
+</html>
