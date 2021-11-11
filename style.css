@@ -1,0 +1,8 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: grid;
+    grid-gap: 1rem;
+}
