@@ -2,35 +2,43 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';">
     <title>MIDI <--> SERIAL PORT BRIDGE</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
-    <label>
-      <input type="checkbox" id="bridgeToggle" disabled="disabled"> Bridge enable
-    </label>
-    <br />
-    <label>Serial port:</label>
-    <select id="portSelection" disabled="disabled">
-      <option selected value> -- select an option -- </option>
-    </select>
-    <br />
-    <label>Baud rate:</label>
-    <select id="baudRateSelection" disabled="disabled">
-      <option disabled selected value> -- select an option -- </option>
-    </select>
-    <br />
-    <label>MIDI output:</label>
-    <select id="outputSelection" disabled="disabled">
-      <option selected value> -- select an option -- </option>
-      <option value="__virtualOutput">Virtual MIDI output</option>
+    <div class="container">
+      <div class="inputWrapper">
+        <label>Serial port</label>
+        <select id="portSelection" disabled="disabled">
+          <option selected value> -- select an option -- </option>
+        </select>
+      </div>
+      <div class="inputWrapper">
+        <label>Baud rate</label>
+        <select id="baudRateSelection" disabled="disabled">
+          <option disabled selected value> -- select an option -- </option>
+        </select>
+      </div>
+      <div class="inputWrapper">
+        <label>MIDI output</label>
+        <select id="outputSelection" disabled="disabled">
+          <option selected value> -- select an option -- </option>
+          <option value="__virtualOutput">Virtual MIDI output</option>
+        </select>
+      </div>
+      <div class="inputWrapper">
+        <label>MIDI input:</label>
+        <select id="inputSelection" disabled="disabled">
+          <option selected value> -- select an option -- </option>
+          <option value="__virtualInput">Virtual MIDI input</option>
+        </select>
+      </div>
+      <label>
+        <input type="checkbox" id="bridgeToggle" disabled="disabled"> Bridge enable
+      </label>
+    </div>
 
-    </select>
-    <br />
-    <label>MIDI input:</label>
-    <select id="inputSelection" disabled="disabled">
-      <option selected value> -- select an option -- </option>
-      <option value="__virtualInput">Virtual MIDI input</option>
-    </select>
     <!-- You can also require other files to run in this process -->
     <script src="./dist/renderer.js"></script>
   </body>
